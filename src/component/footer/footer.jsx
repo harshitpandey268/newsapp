@@ -1,6 +1,5 @@
 import React from 'react'
 import "./footer.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const Footer = () => {
@@ -12,17 +11,17 @@ const Footer = () => {
         <h3><span>NewsApp</span></h3>
 
         <p class="footer-links">
-          <a href="#" class="link-1">Home</a>
+          <a href="#" class="link-1" alt="aa">Home</a>
           
-          <a href="#">Blog</a>
+          <a href="#" alt="aa">Blog</a>
         
-          <a href="#">Pricing</a>
+          <a href="#" alt="aa">Pricing</a>
         
-          <a href="#">About</a>
+          <a href="#" alt="aa">About</a>
           
-          <a href="#">Faq</a>
+          <a href="#" alt="aa">Faq</a>
           
-          <a href="#">Contact</a>
+          <a href="#" alt="aa">Contact</a>
         </p>
 
         <p class="footer-company-name">NewsApp © 2023</p>

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbarrrr from './component/navbarrrr';
 import { useState } from 'react';
@@ -15,7 +14,9 @@ function App() {
   console.log(process.env);
  const newsApi = async () => {
   try{
-    const news = await axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&category=${category}`);
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+    const news = await axios.get(
+      `${proxyUrl}https://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&category=${category}`);
     setNewsArray(news.data.articles);
     setNewsResults(news.data.totalResults);
   } catch (error){
@@ -26,6 +27,7 @@ function App() {
 
  useEffect(() => {
   newsApi();
+  // eslint-disable-next-line
  }, [newsResults,loadMore, category]);
 
   return (
